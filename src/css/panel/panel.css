@@ -1,0 +1,169 @@
+
+.device{
+    /* color: white; */
+    line-height: 2rem;
+    margin-bottom: -55px;
+}
+
+hr{
+    border-top: 1px solid black;
+    position: relative;
+    top: -60px;
+}
+
+nav {direction: rtl;}
+
+.mybtn {
+    border-color: black;
+    font-size: 13px;
+    margin-left: 2px;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+.form-check-input:checked {
+  background-color: var(--icon-color);
+  border-color: var(--icon-color);
+}
+
+.form-switch .form-check-input {
+  border-radius: 0;
+}
+
+.form-switch.form-switch-xl {
+  padding-bottom: 1rem;
+  padding-left: 10.25rem;
+}
+
+.form-check-input:checked ~ .form-check-label::before {
+  border-color: var(--icon-color);
+  background-color: var(--icon-color);
+}
+
+.form-switch.form-switch-xl .form-check-label {
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+.form-switch.form-switch-xl .form-check-label::before {
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 3.5rem;
+}
+.form-switch.form-switch-xl .form-check-label::after {
+  border-radius: 0.25rem;
+  height: calc(2rem - 4px);
+  width: calc(1rem - 4px);
+}
+.form-switch.form-switch-xl .form-check-input:checked ~ .form-check-label::after {
+  transform: translateX(2.5rem);
+
+}
+
+.down-icon{
+  font-size: 18px;
+  position: relative;
+  top: -22px;
+  cursor: pointer;
+}
+
+.share-icon{
+  position: relative;
+  left: -38%;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.relays{
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.device-title{
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+:root{
+  --icon-color: #32b4ee;
+  --body-background: #1f1f1f;
+  --input-background: #f8f9fa;
+  --input-color: #8e8e8e;
+}
+
+@font-face {
+  font-family: 'IranSans';
+  src: url('./../../font/ir_sans.ttf');
+}
+
+.panel {
+    font: 400 13px Lato, sans-serif;
+    font-family: 'IranSans';
+    line-height: 1.8;
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: rgb(34, 34, 34);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: rgb(225, 139, 0) !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+  .navbar-nav{
+    flex-direction: row;
+  }
+
+
+  nav {
+    direction: rtl;
+    background-color: #e3f2fd;
+  }
+
+
+.register img{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position:relative;
+    top: 36%;
+}
+
+.device-list{
+  position: relative;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    img .logo{
+        top: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+    img .logo{
+        top: 45%;
+    }
+
+}
+
+

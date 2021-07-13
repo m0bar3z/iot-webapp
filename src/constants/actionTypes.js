@@ -1,0 +1,4 @@
+export const actionTypes = {
+    ADD_DEVICES: "ADD_DEVICES",
+    UPDATE_DEVICE_RELAY: "UPDATE_DEVICE_RELAY"
+}

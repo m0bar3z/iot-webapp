@@ -1,0 +1,135 @@
+:root {
+    --duration: .4s;
+  }
+  
+  .checker {
+    position: relative;
+    display: block;
+    font-size: 8vmin;
+    height: 1em;
+    width: 2.5em;
+    box-sizing: content-box;
+    padding: 0.15em;
+    border-radius: 0.25em;
+    transition: transform var(--duration) ease;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    transition: transform var(--duration) ease;
+    /* transform: translateX(-0.4em); */
+    transform: translateX(-1.9em);
+    z-index: 5;
+  }
+  .checkmark svg {
+    position: relative;
+    display: block;
+    background: #e5e5e5;
+    transform: translateX(0.4em);
+    border-radius: 0.15em;
+    transition: background-color var(--duration) ease, transform calc(var(--duration) * 1.5) ease;
+  }
+  .checkmark svg path {
+    position: relative;
+    stroke-dasharray: 90 90;
+    stroke-dashoffset: 90;
+    transition: stroke-dashoffset calc(var(--duration) / 3) linear calc(var(--duration) / 3);
+  }
+  
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    visibility: hidden;
+  }
+  .checkbox:checked ~ .checkmark {
+    position: relative;
+    transform: translate(1.9em);
+  }
+  .checkbox:checked ~ .checkmark svg {
+    position: relative;
+    background: var(--icon-color);
+    transform: translate(-1.9em);
+  }
+  .checkbox:checked ~ .checkmark svg path {
+    position: relative;
+    stroke-dashoffset: 0;
+  }
+  
+  .check-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    /* background: white; */
+    background: whitesmoke;
+    z-index: 2;
+  }
+  .check-bg:before, .check-bg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+  .check-bg:after {
+    position: relative;
+    background: white;
+  }
+  .check-bg:before {
+    position: relative;
+    transition: transform var(--duration) ease;
+    transform: translateY(30%);
+    transform-origin: bottom center;
+    background: black;
+    filter: blur(0.25em);
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
+  .checker.checker:active {
+    position: relative;
+    transform: scale(0.85);
+    transition-duration: calc(var(--duration) / 2);
+  }
+  .checker.checker:active .check-bg::before {
+    position: relative;
+    transform: translateY(0) scale(0.8);
+    opacity: 0.2;
+  }
+
+  .row {
+    --bs-gutter-y: 1rem;
+  }
+  
+
+@media only screen and (max-width: 768px) {
+    .checker{
+        font-size: 7vmin;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    .checker{
+        font-size: 9vmin;
+    }
+    .relays{
+        padding-right: 39%;
+    }
+}
+
+.relay-label{
+    position: relative;
+    line-height: 0px;
+    padding-left: 100%;
+    font-weight: bold;
+}
